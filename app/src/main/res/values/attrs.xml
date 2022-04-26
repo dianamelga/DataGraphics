@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LineChartView">
+        <attr name="lineWidth" format="float"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="highlightColor" format="color"/>
+        <attr name="gradientColor" format="reference"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="range" format="float"/>
+        <attr name="circlesRadius" format="float"/>
+        <attr name="showCircle" format="boolean"/>
+        <attr name="showCircleHole" format="boolean"/>
+        <attr name="showFilledArea" format="boolean"/>
+        <attr name="showDashedLine" format="boolean"/>
+        <attr name="lineMode" format="enum">
+            <enum name="linear" value="0"/>
+            <enum name="stepped" value="1"/>
+            <enum name="cubic" value="2"/>
+            <enum name="horizontal" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BarChartView">
+        <attr name="barWidth" format="float"/>
+        <attr name="barColor" format="color"/>
+        <attr name="barGradientStartColor" format="color"/>
+        <attr name="barGradientEndColor" format="color"/>
+        <attr name="showGradient" format="boolean"/>
+    </declare-styleable>
+</resources>

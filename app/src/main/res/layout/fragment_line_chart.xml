@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LineChartFragment"
+        android:background="@color/bg_color">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sw_fill_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FILL AREA"
+            android:textColor="@color/white"
+            android:checked="true"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@id/redraw_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/redraw_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RE-DRAW"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/sw_fill_area"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+            app:layout_constraintHorizontal_chainStyle="packed" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/redraw_btn"
+            app:layout_constraintTop_toTopOf="@id/redraw_btn"
+            android:id="@+id/radioGroup"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/rb_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LINEAR"
+                android:textSize="30sp"
+                android:checked="true"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_stepped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STEPPED"
+                android:textSize="30sp"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_cubic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUBIC"
+                android:textSize="30sp"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HORIZONTAL"
+                android:textSize="30sp"
+                android:textColor="@color/white" />
+
+        </RadioGroup>
+
+        <com.sweatworks.datagraphics.poc.custom.charts.LineChartView
+            android:id="@+id/lineChartView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:lineWidth="6.0"
+            app:lineColor="@color/green_speede"
+            app:gradientColor="@drawable/fade_green"
+            app:circleColor="@color/white"
+            app:range="180.0"
+            app:showFilledArea="true"
+            app:showCircle="true"
+            app:circlesRadius="6.0"
+            app:layout_constraintTop_toBottomOf="@id/redraw_btn"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
