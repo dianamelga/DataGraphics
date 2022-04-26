@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BalanceAndForceFragment"
+        android:background="@color/bg_color"
+        android:id="@+id/container">
+
+        <ImageView
+            android:id="@+id/iv_feet_balance"
+            android:layout_width="222dp"
+            android:layout_height="190dp"
+            android:src="@drawable/ic_feet_balance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="540dp"/>
+        
+        <ImageView
+            android:id="@+id/iv_ring"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@drawable/ic_ellipse_white"
+            app:layout_constraintStart_toStartOf="@id/iv_feet_balance"
+            app:layout_constraintEnd_toEndOf="@id/iv_feet_balance"
+            app:layout_constraintTop_toTopOf="@id/iv_feet_balance"
+            app:layout_constraintBottom_toBottomOf="@id/iv_feet_balance"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintVertical_bias="0.52"/>
+
+
+        <Button
+            android:id="@+id/btn_left_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEFT"
+            android:layout_marginStart="140dp"
+            app:layout_constraintStart_toEndOf="@id/iv_feet_balance"
+            app:layout_constraintTop_toTopOf="@id/iv_feet_balance"/>
+
+        <Button
+            android:id="@+id/btn_right_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIGHT"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/btn_left_ring"
+            app:layout_constraintTop_toTopOf="@id/iv_feet_balance"/>
+        <Button
+            android:id="@+id/btn_top_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP"
+            app:layout_constraintStart_toStartOf="@id/btn_left_ring"
+            app:layout_constraintTop_toBottomOf="@id/btn_left_ring"/>
+
+        <Button
+            android:id="@+id/btn_bottom_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOTTOM"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/btn_top_ring"
+            app:layout_constraintTop_toBottomOf="@id/btn_right_ring"/>
+
+        
+        <ImageView
+            android:id="@+id/iv_hand_force"
+            android:layout_width="277dp"
+            android:layout_height="23dp"
+            android:src="@drawable/ic_hand_force"
+            app:layout_constraintTop_toBottomOf="@id/iv_feet_balance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="140dp"/>
+
+
+        <Button
+            android:id="@+id/btn_left_top_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEFT TOP"
+            android:layout_marginStart="100dp"
+            app:layout_constraintStart_toEndOf="@id/iv_hand_force"
+            app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
+
+        <Button
+            android:id="@+id/btn_right_top_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIGHT TOP"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/btn_left_top_line"
+            app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
+        <Button
+            android:id="@+id/btn_left_bottom_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEFT BOTTOM"
+            app:layout_constraintStart_toStartOf="@id/btn_left_top_line"
+            app:layout_constraintTop_toBottomOf="@id/btn_left_top_line"/>
+
+        <Button
+            android:id="@+id/btn_right_bottom_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIGHT BOTTOM"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/btn_left_bottom_line"
+            app:layout_constraintTop_toBottomOf="@id/btn_right_top_line"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

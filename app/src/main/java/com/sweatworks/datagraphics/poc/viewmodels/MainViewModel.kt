@@ -20,6 +20,10 @@ class MainViewModel @Inject constructor() : ViewModel() {
         navigateTo(NavigationState.LineChartScreen)
     }
 
+    fun goToBalanceAndForceScreen() {
+        navigateTo(NavigationState.BalanceAndForceScreen)
+    }
+
     private fun navigateTo(screen: NavigationState) {
         _navigationState.postValue(screen)
     }
@@ -29,4 +33,5 @@ sealed class NavigationState {
     object MainScreen : NavigationState()
     object BarChartScreen : NavigationState()
     object LineChartScreen : NavigationState()
+    object BalanceAndForceScreen : NavigationState()
 }

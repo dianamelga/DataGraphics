@@ -29,6 +29,7 @@ class MainFragment : Fragment() {
 
         binding.barChartBtn.setOnClickListener { rootViewModel.goToBarChartScreen() }
         binding.lineChartBtn.setOnClickListener { rootViewModel.goToLineChartScreen() }
+        binding.movementsBtn.setOnClickListener { rootViewModel.goToBalanceAndForceScreen() }
     }
 
     companion object {

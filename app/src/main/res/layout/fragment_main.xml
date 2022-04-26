@@ -42,5 +42,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bar_chart_btn"/>
 
+    <Button
+        android:id="@+id/movements_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movements"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_chart_btn"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

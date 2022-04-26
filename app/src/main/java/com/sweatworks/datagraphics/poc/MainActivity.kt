@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
                 NavigationState.BarChartScreen -> goTo(BarChartFragment.newInstance(), BarChartFragment.TAG)
                 NavigationState.LineChartScreen -> goTo(LineChartFragment.newInstance(), LineChartFragment.TAG)
                 NavigationState.MainScreen -> goTo(MainFragment.newInstance(), MainFragment.TAG)
+                NavigationState.BalanceAndForceScreen -> goTo(BalanceAndForceFragment.newInstance(), BalanceAndForceFragment.TAG)
             }
         }
     }
