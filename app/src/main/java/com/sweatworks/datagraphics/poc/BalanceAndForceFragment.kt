@@ -2,14 +2,17 @@ package com.sweatworks.datagraphics.poc
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.transition.ChangeBounds
+import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.RotateAnimation
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import android.transition.ChangeBounds
-import android.transition.TransitionManager
 import com.sweatworks.datagraphics.poc.databinding.FragmentBalanceAndForceBinding
 import kotlin.math.roundToInt
 
@@ -18,6 +21,8 @@ class BalanceAndForceFragment : Fragment() {
     private lateinit var binding: FragmentBalanceAndForceBinding
     private lateinit var whiteRingDrawable: Drawable
     private lateinit var redRingDrawable: Drawable
+    private lateinit var whiteLineDrawable: Drawable
+    private lateinit var redLineDrawable: Drawable
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +38,8 @@ class BalanceAndForceFragment : Fragment() {
 
         whiteRingDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_ellipse_white)!!
         redRingDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_ellipse_red)!!
+        whiteLineDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_white_line)!!
+        redLineDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_red_line)!!
 
         binding.btnBottomRing.setOnClickListener {
             moveRingVertically(0.1f)
@@ -49,6 +56,22 @@ class BalanceAndForceFragment : Fragment() {
         binding.btnRightRing.setOnClickListener {
             moveRingHorizontally(0.1f)
         }
+
+        // hand force
+
+        binding.btnLeftLine.setOnClickListener {
+            rotateLine(-5f)
+        }
+
+        binding.btnRightLine.setOnClickListener {
+            rotateLine(5f)
+        }
+    }
+
+    private fun rotateLine(addAngle: Float) {
+        val newAngle = binding.handForceLine.rotation + addAngle
+        binding.handForceLine.rotation = newAngle
+        checkLineColor()
     }
 
     private fun moveRingVertically(value: Float) {
@@ -79,6 +102,15 @@ class BalanceAndForceFragment : Fragment() {
             binding.ivRing.setImageDrawable(redRingDrawable)
         } else {
             binding.ivRing.setImageDrawable(whiteRingDrawable)
+        }
+    }
+
+    private fun checkLineColor() {
+        val rotation = binding.handForceLine.rotation
+        if (rotation != 0f) {
+            binding.handForceLine.setImageDrawable(redLineDrawable)
+        } else {
+            binding.handForceLine.setImageDrawable(whiteLineDrawable)
         }
     }
 

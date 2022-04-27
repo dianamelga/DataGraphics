@@ -76,41 +76,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="140dp"/>
+        
+        <ImageView
+            android:id="@+id/hand_force_line"
+            android:layout_width="192dp"
+            android:layout_height="7dp"
+            android:src="@drawable/ic_white_line"
+            app:layout_constraintVertical_bias="0.8"
+            android:rotation="0.0"
+            app:layout_constraintStart_toStartOf="@id/iv_hand_force"
+            app:layout_constraintEnd_toEndOf="@id/iv_hand_force"
+            app:layout_constraintTop_toTopOf="@id/iv_hand_force"
+            app:layout_constraintBottom_toBottomOf="@id/iv_hand_force"/>
 
 
         <Button
-            android:id="@+id/btn_left_top_line"
+            android:id="@+id/btn_left_line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LEFT TOP"
+            android:text="LEFT"
             android:layout_marginStart="100dp"
             app:layout_constraintStart_toEndOf="@id/iv_hand_force"
             app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
 
         <Button
-            android:id="@+id/btn_right_top_line"
+            android:id="@+id/btn_right_line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RIGHT TOP"
+            android:text="RIGHT"
             android:layout_marginStart="20dp"
-            app:layout_constraintStart_toEndOf="@id/btn_left_top_line"
+            app:layout_constraintStart_toEndOf="@id/btn_left_line"
             app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
-        <Button
-            android:id="@+id/btn_left_bottom_line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LEFT BOTTOM"
-            app:layout_constraintStart_toStartOf="@id/btn_left_top_line"
-            app:layout_constraintTop_toBottomOf="@id/btn_left_top_line"/>
 
-        <Button
-            android:id="@+id/btn_right_bottom_line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RIGHT BOTTOM"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toEndOf="@id/btn_left_bottom_line"
-            app:layout_constraintTop_toBottomOf="@id/btn_right_top_line"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
