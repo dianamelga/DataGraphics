@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Sweatworks Charts PoC"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dp_15px"
         android:textColor="@color/white"
-        android:textSize="80sp"
+        android:textSize="@dimen/sp_60px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -26,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bar Chart"
-        android:layout_marginTop="50dp"
-        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dp_38px"
+        android:textSize="@dimen/sp_23px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"/>
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Line Chart"
-        android:textSize="30sp"
+        android:textSize="@dimen/sp_23px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bar_chart_btn"/>
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movements"
-        android:textSize="30sp"
+        android:textSize="@dimen/sp_23px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line_chart_btn"/>

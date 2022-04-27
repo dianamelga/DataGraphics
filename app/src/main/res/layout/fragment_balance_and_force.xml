@@ -11,18 +11,18 @@
 
         <ImageView
             android:id="@+id/iv_feet_balance"
-            android:layout_width="222dp"
-            android:layout_height="190dp"
+            android:layout_width="@dimen/dp_167px"
+            android:layout_height="@dimen/dp_143px"
             android:src="@drawable/ic_feet_balance"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="540dp"/>
+            android:layout_marginTop="@dimen/dp_405px"/>
         
         <ImageView
             android:id="@+id/iv_ring"
-            android:layout_width="88dp"
-            android:layout_height="88dp"
+            android:layout_width="@dimen/dp_66px"
+            android:layout_height="@dimen/dp_66px"
             android:src="@drawable/ic_ellipse_white"
             app:layout_constraintStart_toStartOf="@id/iv_feet_balance"
             app:layout_constraintEnd_toEndOf="@id/iv_feet_balance"
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LEFT"
-            android:layout_marginStart="140dp"
+            android:layout_marginStart="@dimen/dp_105px"
             app:layout_constraintStart_toEndOf="@id/iv_feet_balance"
             app:layout_constraintTop_toTopOf="@id/iv_feet_balance"/>
 
@@ -75,12 +75,12 @@
             app:layout_constraintTop_toBottomOf="@id/iv_feet_balance"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="140dp"/>
+            android:layout_marginTop="@dimen/dp_105px"/>
         
         <ImageView
             android:id="@+id/hand_force_line"
-            android:layout_width="192dp"
-            android:layout_height="7dp"
+            android:layout_width="@dimen/dp_144px"
+            android:layout_height="@dimen/dp_5px"
             android:src="@drawable/ic_white_line"
             app:layout_constraintVertical_bias="0.8"
             android:rotation="0.0"
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LEFT"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="@dimen/dp_75px"
             app:layout_constraintStart_toEndOf="@id/iv_hand_force"
             app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
 
@@ -104,39 +104,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RIGHT"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/dp_15px"
             app:layout_constraintStart_toEndOf="@id/btn_left_line"
             app:layout_constraintTop_toTopOf="@id/iv_hand_force"/>
         
         
         
         <androidx.cardview.widget.CardView
-            android:layout_width="898dp"
-            android:layout_height="405dp"
+            android:layout_width="@dimen/dp_674px"
+            android:layout_height="@dimen/dp_304px"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/hand_force_line"
-            android:layout_marginTop="150dp"
-            app:cardBackgroundColor="#152834"
-            app:cardCornerRadius="21dp">
+            android:layout_marginTop="@dimen/dp_113px"
+            app:cardBackgroundColor="@color/blue_lighter_blue"
+            app:cardCornerRadius="@dimen/dp_16px">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 
                 <ImageView
                     android:id="@+id/tempo_1"
-                    android:layout_width="121dp"
-                    android:layout_height="266dp"
+                    android:layout_width="@dimen/dp_91px"
+                    android:layout_height="@dimen/dp_200px"
                     android:src="@drawable/ic_tempo_graph"
-                    android:layout_marginStart="157dp"
+                    android:layout_marginStart="@dimen/dp_118px"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
                 
                 <ImageView
                     android:id="@+id/line_tempo_1"
-                    android:layout_width="121dp"
-                    android:layout_height="13dp"
+                    android:layout_width="@dimen/dp_91px"
+                    android:layout_height="@dimen/dp_10px"
                     android:src="@drawable/ic_tempo_line"
                     app:layout_constraintVertical_bias="0.0"
                     app:layout_constraintStart_toStartOf="@id/tempo_1"
@@ -146,18 +146,18 @@
 
                 <ImageView
                     android:id="@+id/tempo_2"
-                    android:layout_width="121dp"
-                    android:layout_height="266dp"
+                    android:layout_width="@dimen/dp_91px"
+                    android:layout_height="@dimen/dp_200px"
                     android:src="@drawable/ic_tempo_graph"
-                    android:layout_marginEnd="157dp"
+                    android:layout_marginEnd="@dimen/dp_118px"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <ImageView
                     android:id="@+id/line_tempo_2"
-                    android:layout_width="121dp"
-                    android:layout_height="13dp"
+                    android:layout_width="@dimen/dp_91px"
+                    android:layout_height="@dimen/dp_10px"
                     android:src="@drawable/ic_tempo_line"
                     app:layout_constraintVertical_bias="1.0"
                     app:layout_constraintStart_toStartOf="@id/tempo_2"

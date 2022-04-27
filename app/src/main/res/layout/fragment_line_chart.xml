@@ -16,7 +16,7 @@
             android:text="FILL AREA"
             android:textColor="@color/white"
             android:checked="true"
-            android:textSize="30sp"
+            android:textSize="@dimen/sp_23px"
             app:layout_constraintEnd_toStartOf="@id/redraw_btn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RE-DRAW"
-            android:textSize="30sp"
+            android:textSize="@dimen/sp_23px"
             app:layout_constraintStart_toEndOf="@+id/sw_fill_area"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -40,8 +40,8 @@
             app:layout_constraintStart_toEndOf="@+id/redraw_btn"
             app:layout_constraintTop_toTopOf="@id/redraw_btn"
             android:id="@+id/radioGroup"
-            android:textSize="30sp"
-            android:layout_marginStart="10dp"
+            android:textSize="@dimen/sp_23px"
+            android:layout_marginStart="@dimen/dp_8px"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LINEAR"
-                android:textSize="30sp"
+                android:textSize="@dimen/sp_23px"
                 android:checked="true"
                 android:textColor="@color/white" />
 
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="STEPPED"
-                android:textSize="30sp"
+                android:textSize="@dimen/sp_23px"
                 android:textColor="@color/white" />
 
             <RadioButton
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CUBIC"
-                android:textSize="30sp"
+                android:textSize="@dimen/sp_23px"
                 android:textColor="@color/white" />
 
             <RadioButton
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="HORIZONTAL"
-                android:textSize="30sp"
+                android:textSize="@dimen/sp_23px"
                 android:textColor="@color/white" />
 
         </RadioGroup>

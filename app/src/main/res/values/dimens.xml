@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_167px">222dp</dimen>
+    <dimen name="dp_143px">190dp</dimen>
+    <dimen name="dp_405px">540dp</dimen>
+    <dimen name="dp_66px">88dp</dimen>
+    <dimen name="dp_105px">140dp</dimen>
+    <dimen name="dp_144px">192dp</dimen>
+    <dimen name="dp_5px">7dp</dimen>
+    <dimen name="dp_75px">100dp</dimen>
+    <dimen name="dp_15px">20dp</dimen>
+    <dimen name="dp_674px">898dp</dimen>
+    <dimen name="dp_304px">405dp</dimen>
+    <dimen name="dp_113px">150dp</dimen>
+    <dimen name="dp_16px">21dp</dimen>
+    <dimen name="dp_91px">121dp</dimen>
+    <dimen name="dp_200px">266dp</dimen>
+    <dimen name="dp_118px">157dp</dimen>
+    <dimen name="dp_10px">13dp</dimen>
+    <dimen name="sp_23px">30sp</dimen>
+    <dimen name="dp_8px">10dp</dimen>
+    <dimen name="sp_60px">80sp</dimen>
+    <dimen name="dp_38px">50dp</dimen>
+</resources>
