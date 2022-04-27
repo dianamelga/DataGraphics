@@ -111,6 +111,7 @@
         
         
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_tempo"
             android:layout_width="@dimen/dp_674px"
             android:layout_height="@dimen/dp_304px"
             app:layout_constraintStart_toStartOf="parent"
@@ -167,6 +168,47 @@
                 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_tempo_1_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP"
+            app:layout_constraintStart_toStartOf="@id/cv_tempo"
+            app:layout_constraintTop_toBottomOf="@id/cv_tempo"
+            android:layout_marginTop="@dimen/dp_66px"
+            />
+
+        <Button
+            android:id="@+id/btn_tempo_1_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOTOM"
+            app:layout_constraintStart_toStartOf="@id/cv_tempo"
+            app:layout_constraintTop_toBottomOf="@id/btn_tempo_1_top"
+            android:layout_marginTop="@dimen/dp_10px"
+            />
+
+
+        <Button
+            android:id="@+id/btn_tempo_2_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP"
+            app:layout_constraintEnd_toEndOf="@id/cv_tempo"
+            app:layout_constraintTop_toBottomOf="@id/cv_tempo"
+            android:layout_marginTop="@dimen/dp_66px"
+            />
+
+        <Button
+            android:id="@+id/btn_tempo_2_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOTOM"
+            app:layout_constraintEnd_toEndOf="@id/cv_tempo"
+            app:layout_constraintTop_toBottomOf="@id/btn_tempo_2_top"
+            android:layout_marginTop="@dimen/dp_10px"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

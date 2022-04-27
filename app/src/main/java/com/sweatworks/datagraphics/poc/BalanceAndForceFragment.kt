@@ -63,6 +63,44 @@ class BalanceAndForceFragment : Fragment() {
         binding.btnRightLine.setOnClickListener {
             rotateLine(5f)
         }
+
+        // tempo
+
+        binding.btnTempo1Top.setOnClickListener {
+            moveLineTempo1(true)
+        }
+
+        binding.btnTempo1Bottom.setOnClickListener {
+            moveLineTempo1(false)
+        }
+
+        binding.btnTempo2Top.setOnClickListener {
+            moveLineTempo2(true)
+        }
+
+        binding.btnTempo2Bottom.setOnClickListener {
+            moveLineTempo2(false)
+        }
+    }
+
+    private fun moveLineTempo1(top: Boolean) {
+        val animation = ChangeBounds()
+        animation.duration = 500
+        TransitionManager.beginDelayedTransition(binding.container, animation)
+        val lparams = binding.lineTempo1.layoutParams as ConstraintLayout.LayoutParams
+        val vBias = lparams.verticalBias + (if (!top) 0.1f else -0.1f)
+        lparams.verticalBias = vBias
+        binding.lineTempo1.layoutParams = lparams
+    }
+
+    private fun moveLineTempo2(top: Boolean) {
+        val animation = ChangeBounds()
+        animation.duration = 500
+        TransitionManager.beginDelayedTransition(binding.container, animation)
+        val lparams = binding.lineTempo2.layoutParams as ConstraintLayout.LayoutParams
+        val vBias = lparams.verticalBias + (if (!top) 0.1f else -0.1f)
+        lparams.verticalBias = vBias
+        binding.lineTempo2.layoutParams = lparams
     }
 
     private fun rotateLine(addAngle: Float) {
