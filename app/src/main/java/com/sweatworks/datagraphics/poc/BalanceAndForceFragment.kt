@@ -73,7 +73,9 @@ class BalanceAndForceFragment : Fragment() {
 
     private fun checkRingColor() {
         val lparams = binding.ivRing.layoutParams as ConstraintLayout.LayoutParams
-        if (lparams.horizontalBias.roundToInt().div(100f) != 0.49f || lparams.verticalBias.roundToInt().div(100f) != 0.52f) {
+        val hBias = lparams.horizontalBias.times(100).roundToInt().div(100f)
+        val vBias = lparams.verticalBias.times(100).roundToInt().div(100f)
+        if (hBias != 0.49f || vBias != 0.52f) {
             binding.ivRing.setImageDrawable(redRingDrawable)
         } else {
             binding.ivRing.setImageDrawable(whiteRingDrawable)
